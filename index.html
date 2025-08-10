@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Signal</title>
+    <style>
+        body {
+            margin-top: 10%;
+            margin-left: 10%;
+            text-align: center;
+        }
+        button {
+            border-style: solid;
+            border-radius: 50%;
+            padding: 30px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <img onclick="off()" id="traffic-light" src="https://sdmntprcentralus.oaiusercontent.com/files/00000000-6344-61f5-b180-c4aa28fac8a3/raw?se=2025-08-10T07%3A37%3A23Z&sp=r&sv=2024-08-04&sr=b&scid=e7c25030-81f4-5077-9c3c-694b90f8b2e9&skoid=9ccea605-1409-4478-82eb-9c83b25dc1b0&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-08-09T08%3A03%3A08Z&ske=2025-08-10T08%3A03%3A08Z&sks=b&skv=2024-08-04&sig=dvSexNv/6b4spqgorLKFbMnIGcSWi2tvFhQ04Fzjav0%3D"
+         alt="traffic" width="500px" height="auto">
+         <br>
+    <button onclick="chooseLight('red')" style="background-color: red;"></button>
+    <button onclick="chooseLight('yellow')" style="background-color: yellow;"></button>
+    <button onclick="chooseLight('green')" style="background-color: green;"></button>
+
+    <script>
+        document.body.style.backgroundColor = "black";
+        function chooseLight(color) {
+            let img = document.getElementById("traffic-light");
+            if (color === "red") {
+                img.src = "https://sdmntprwestus2.oaiusercontent.com/files/00000000-3ff8-61f8-a0ae-026b0f1fba70/raw?se=2025-08-10T07%3A36%3A13Z&sp=r&sv=2024-08-04&sr=b&scid=bb39bc4d-2332-53b1-a9aa-b2f772727f1e&skoid=9ccea605-1409-4478-82eb-9c83b25dc1b0&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-08-09T17%3A00%3A30Z&ske=2025-08-10T17%3A00%3A30Z&sks=b&skv=2024-08-04&sig=y4PQ7DoZvkxQ7Oaf5v0oMH6QsGynQFenNdEPntOqJvU%3D";
+            } else if (color === "yellow") {
+                img.src = "https://sdmntprcentralus.oaiusercontent.com/files/00000000-ddec-61f5-ae7c-ac175c802c24/raw?se=2025-08-10T07%3A38%3A23Z&sp=r&sv=2024-08-04&sr=b&scid=d7952597-1b43-5139-97d3-f446db323e18&skoid=9ccea605-1409-4478-82eb-9c83b25dc1b0&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-08-10T06%3A24%3A22Z&ske=2025-08-11T06%3A24%3A22Z&sks=b&skv=2024-08-04&sig=TqmG4wwInNJpg5CmpSkua4t4hF/d/UtuWTIrROIjnV8%3D";
+            } else if (color === "green") {
+                img.src = "https://sdmntprnorthcentralus.oaiusercontent.com/files/00000000-18c0-622f-ac17-5bfcfd8accb2/raw?se=2025-08-10T07%3A39%3A23Z&sp=r&sv=2024-08-04&sr=b&scid=1f1e9477-34fa-504a-a52c-4e170f8419b3&skoid=9ccea605-1409-4478-82eb-9c83b25dc1b0&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-08-09T17%3A00%3A18Z&ske=2025-08-10T17%3A00%3A18Z&sks=b&skv=2024-08-04&sig=nCU8EENV0s5MJZ%2BbQiC1O0NVPlLhs22D56tk%2Bb9Zkuo%3D";
+            }
+        }
+        function off() {
+            let img = document.getElementById("traffic-light");
+            img.src = "https://sdmntprcentralus.oaiusercontent.com/files/00000000-6344-61f5-b180-c4aa28fac8a3/raw?se=2025-08-10T07%3A37%3A23Z&sp=r&sv=2024-08-04&sr=b&scid=e7c25030-81f4-5077-9c3c-694b90f8b2e9&skoid=9ccea605-1409-4478-82eb-9c83b25dc1b0&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-08-09T08%3A03%3A08Z&ske=2025-08-10T08%3A03%3A08Z&sks=b&skv=2024-08-04&sig=dvSexNv/6b4spqgorLKFbMnIGcSWi2tvFhQ04Fzjav0%3D";
+        }
+    </script>
+</body>
+</html>
